@@ -25,21 +25,21 @@ describe('allergicTo', () => {
 })
 
 describe('list', () => {
-  xit('no allergies at all', () => {
+  it('no allergies at all', () => {
     const allergies = new Allergies(0)
     const expected: string[] = []
 
     expect(allergies.list()).toEqual(expected)
   })
 
-  xit('allergic to just eggs', () => {
+  it('allergic to just eggs', () => {
     const allergies = new Allergies(1)
     const expected = ['eggs']
 
     expect(allergies.list()).toEqual(expected)
   })
 
-  xit('allergic to just peanuts', () => {
+  it('allergic to just peanuts', () => {
     const allergies = new Allergies(2)
     const expected = ['peanuts']
 
@@ -74,7 +74,7 @@ describe('list', () => {
     expect(allergies.list()).toEqual(expected)
   })
 
-  xit('allergic to everything', () => {
+  it('allergic to everything', () => {
     const allergies = new Allergies(255)
     const expected = [
       'eggs',
