@@ -9,13 +9,13 @@ describe('allergicTo', () => {
     expect(allergies.allergicTo('strawberries')).toBeFalsy()
   })
 
-  xit('is allergic to eggs', () => {
+  it('is allergic to eggs', () => {
     const allergies = new Allergies(1)
 
     expect(allergies.allergicTo('eggs')).toBeTruthy()
   })
 
-  xit('allergic to eggs in addition to other stuff', () => {
+  it('allergic to eggs in addition to other stuff', () => {
     const allergies = new Allergies(5)
 
     expect(allergies.allergicTo('eggs')).toBeTruthy()
@@ -46,28 +46,28 @@ describe('list', () => {
     expect(allergies.list()).toEqual(expected)
   })
 
-  xit('allergic to just strawberries', () => {
+  it('allergic to just strawberries', () => {
     const allergies = new Allergies(8)
     const expected = ['strawberries']
 
     expect(allergies.list()).toEqual(expected)
   })
 
-  xit('allergic to eggs and peanuts', () => {
+  it('allergic to eggs and peanuts', () => {
     const allergies = new Allergies(3)
     const expected = ['eggs', 'peanuts']
 
     expect(allergies.list()).toEqual(expected)
   })
 
-  xit('allergic to more than eggs but not peanuts', () => {
+  it('allergic to more than eggs but not peanuts', () => {
     const allergies = new Allergies(5)
     const expected = ['eggs', 'shellfish']
 
     expect(allergies.list()).toEqual(expected)
   })
 
-  xit('allergic to lots of stuff', () => {
+  it('allergic to lots of stuff', () => {
     const allergies = new Allergies(248)
     const expected = ['strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats']
 
@@ -90,7 +90,7 @@ describe('list', () => {
     expect(allergies.list()).toEqual(expected)
   })
 
-  xit('ignore non allergen score parts', () => {
+  it('ignore non allergen score parts', () => {
     const allergies = new Allergies(509)
     const expected = [
       'eggs',
